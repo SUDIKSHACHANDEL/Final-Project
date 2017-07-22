@@ -1,0 +1,130 @@
+{% load static %} 
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login</title>
+
+		<meta charset="utf-8">
+		<meta http-equive"X-UA-Compatible" contents= "IE#edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+
+		<!--Bootstrap-->
+		<link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+
+	<style>
+
+
+		#id1
+		{
+			margin-left:50px;
+			margin-right:25px;
+			height:30px;
+			width:250px;
+		}
+		demo
+		{
+			background-color:black;
+			height:800px;
+			width:30px;
+			align:center;
+
+
+		}
+		.d1
+		{
+			font-style:bold;
+			float:center;
+			font:Times new roman;
+			font-size:20px;
+			background-color:#F5FFFA;
+			color:grey;
+		}
+		a:link,a:visited {
+
+			background-color:blue;
+			display:inline block;
+		        text-decoration:none;
+			border-radius:5px;
+		        text-align:center;
+			padding: 8px 15px;
+
+			color:white;
+	               }
+
+
+			}
+		.div1 {
+			width:500px;
+			height: 200px;
+			padding:30px
+			border: 1px solid grey;
+		      }
+		.flex-container{
+			display: -webkit-flex;
+			display: flex;
+                        width: 400px;
+			height: 250px
+			background-color:lightgrey;
+			align:center;
+			}
+		.flex-item{
+			background-color : pink;
+			width: 100px;
+		    height: 500px;
+			margin:10px;
+			align:center;
+	</style>
+
+	</head>
+	<body>
+
+		<!--row1-->
+
+			<div class="row"align="center"class="flex-container">
+
+			<div class="col-sm-4 col-sm-offset-4" class="div1">
+
+
+
+
+
+
+
+
+					  <h1 id="h1">Log in</h1>
+					  <p class="d1" bgcolor="#F5FFFA">
+					  Log in with your <br> email and password.</p>
+					  <br>
+
+							<a href="fb.html"target="_blank"><b>Log in with facebook</b></a><br<br>
+					<br><br>
+
+
+			<form id="demo"method="POST">
+			{% csrf_token %}
+ 		 <br>
+		 <input id ="id1"type="text" name="email" value="{{ email }}"placeholder="MOBILE NUMBER OR EMAIL"size="50">
+		<br>
+  	        <br>
+
+		<input id="id1" type="password" value="{{ password }}"placeholder="PASSWORD"size="50">
+		<div>
+			<input type="submit"value="ok"></div>
+			</form><br><br>
+			<!--<a href="sign.html"target="_blank"><b>Sign Up</a><br> -->
+			</div></div>
+
+
+
+
+
+
+
+
+
+		<script src = "{% static "js/jquery-3.2.1.js" %}"></script>
+		<script scr="{% static "js/bootstrap.js" %}"></script>
+	</body>
+</html>

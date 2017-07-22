@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sign-up</title>
+
+		<meta charset="utf-8">
+		<meta http-equive"X-UA-Compatible" contents= "IE#edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+
+		<!--Bootstrap-->
+		<link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+
+
+	<style>
+		h1
+		{
+			background-color:#ffff;
+			width:50%;
+			font:Vani;
+			size:90px;
+			font-style:italic;
+			color;grey;
+		}
+ 
+      		#id1
+		{
+			margin-left:50px;
+			margin-right:25px;
+			height:30px;
+			width:250px;
+		}
+		demo
+		{
+			background-color:black;
+			height:800px;
+			width:30px;
+			align:center;
+			
+			
+		}
+		.d1
+		{
+			font-style:bold;
+			float:center;
+			font:Times new roman;
+			font-size:20px;
+			background-color:#F5FFFA;
+			color:grey;
+		}
+		a:link,a:visited {
+			
+			background-color:blue;
+			display:inline block;
+		        text-decoration:none;
+			border-radius:5px;
+		        text-align:center;
+			padding: 8px 15px;
+			
+			color:white;
+	               }
+		
+
+			}
+		.div1 {
+			width:500px;
+			height: 200px;
+			padding:30px
+			border: 1px solide grey;
+		      }
+		.flex-container{
+			display: -webkit-flex;
+			display: flex;
+                        width: 400px;
+			height: 250px
+			background-color:lightgrey;
+			align:center;
+			}
+		.flex-item{
+			background-color : pink;
+			width: 100px;
+		        height: 500px;
+			margin:10px;
+			align:center;
+	</style>
+
+	</head>
+	<body>
+		
+		<!--row1-->
+		<table align="center"><tbody><tr><td>
+						<img src="E:\images.jpg"height="200%"width="120%"class="img-thumbnail"></img></td><td bgcolor="#F5FFFA">
+			<div class="row"align="center"class="flex-container">
+			
+			<div class="col-sm-4 col-sm-offset-4" class="div1">
+			
+			
+						
+
+							
+			
+				  
+				
+					  <h1 id="h1">Instagram</h1>
+					  <p class="d1" bgcolor="#F5FFFA">
+					  Sign Up to see photos and vedios <br>from your friends.</p>
+					  <br>
+				
+							<a href="fb.html"target="_blank"><b>Log in with facebook</b></a><br<br>
+					<br><br>
+			 
+
+			<form id="demo"method="POST">
+			{% csrf_token %}
+ 		 <br>
+		 <input id ="id1"type="text" name="email" value="{{ email }}"placeholder="MOBILE NUMBER OR EMAIL"size="50">
+		<br>
+  	        <br>
+		<input id="id1"type="text"name="username"value="{{ username }}"placeholder="USER NAME"size="50"><br><br>
+		<input id ="id1"type="text" name="fullname" value="{{ name }}"placeholder="FULL NAME"size="50">
+		<br><br>
+		<input id="id1" type="password" value="{{ password }}"placeholder="PASSWORD"size="50">
+		<div>
+			<input type="submit"value="signup" ></div>
+			</form><br><br> 
+			<!--<a href="sign.html"target="_blank"><b>Sign Up</a><br> -->
+			</div></td></tr>
+				
+			
+			
+		 </td></tbody></table>
+			
+		
+		<script src = "{% static "js/jquery-3.2.1.js" %}"></script>
+		<script scr="{% static "js/bootstrap.js" %}"></script>
+
+
+
+	</body>
+</html>
