@@ -1,130 +1,176 @@
-{% load static %} 
+{% load static  %}
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>Login</title>
-
 		<meta charset="utf-8">
-		<meta http-equive"X-UA-Compatible" contents= "IE#edge">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-
-
-
+    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width">
+		
 		<!--Bootstrap-->
 		<link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
-
-	<style>
-
-
-		#id1
-		{
-			margin-left:50px;
-			margin-right:25px;
-			height:30px;
-			width:250px;
-		}
-		demo
-		{
-			background-color:black;
-			height:800px;
-			width:30px;
-			align:center;
-
-
-		}
-		.d1
-		{
-			font-style:bold;
-			float:center;
-			font:Times new roman;
-			font-size:20px;
-			background-color:#F5FFFA;
-			color:grey;
-		}
-		a:link,a:visited {
-
-			background-color:blue;
-			display:inline block;
-		        text-decoration:none;
-			border-radius:5px;
-		        text-align:center;
-			padding: 8px 15px;
-
-			color:white;
-	               }
-
-
-			}
-		.div1 {
-			width:500px;
-			height: 200px;
-			padding:30px
-			border: 1px solid grey;
-		      }
-		.flex-container{
-			display: -webkit-flex;
-			display: flex;
-                        width: 400px;
-			height: 250px
-			background-color:lightgrey;
-			align:center;
-			}
-		.flex-item{
-			background-color : pink;
-			width: 100px;
-		    height: 500px;
-			margin:10px;
-			align:center;
-	</style>
-
 	</head>
-	<body>
-
-		<!--row1-->
-
-			<div class="row"align="center"class="flex-container">
-
-			<div class="col-sm-4 col-sm-offset-4" class="div1">
+	
+	<body>	
+		<!--header-->
 
 
+                   
+
+
+                    <header>
+                           <nav class="navbar navbar-inverse">
+                                  <div class="container">
+			          <div class="navbar-header">
+                                  <button type="button" class="navbar-toggle collapsed" 
+				  data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+				  aria-expanded="false">
+                                  <span class="sr-only">Toggle navigation</span>
+
+                                  <span class="icon-bar"></span>
+                                  <span class="icon-bar"></span>
+                                  <span class="icon-bar"></span>
+                                  </button>
+                                  <a class="navbar-brand" href="#">GitHub</a>
+				  </div>
+				  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                  <ul class="nav navbar-nav">
+                                        <li class="active"><a href="#">Home
+					<span class="sr-only">(current)</span></a></li>
+                                        <li><a href="#">Contact</a></li>
+                                        <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
+				    role="button" aria-haspopup="true" 
+				    aria-expanded="false">Services <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                    <li><a href="#">Login</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">One more separated link</a></li>
+                                     </ul>
+                                        </li>
+                                     </ul>
+                                    <form class="navbar-form navbar-left">
+                                    <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    </div>
+                                    <button type="submit" class="btn btn-default">Submit</button>
+                                    </form>
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="#">Login</a></li>
+                                        <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Setting <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                    <li><a href="#">Setting</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                    </li>
+                                    </ul>
+			          </div>
+								  </div>  </nav>
+		</header>
+		<!--/header-->
 
 
 
 
+  
+<!--<div class="container">-->
+<!--<div class="row">-->
+    <!--<div class="col-sm-2 vcol-sm-offset-5">-->
+      <!--<h3>Column 1</h3>-->
+      <!--<p><div align="center" class="embed-responsive embed-responsive-16by9">-->
+    <!--<video autoplay loop class="embed-responsive-item">-->
+        <!--<source src="C:\Users\Vikas\Downloads\Baby Doing Grocery Shopping _ Supermarket Song - YouTube (240p) (1).flv" type="video/mp4">-->
+    <!--</video></p>-->
+<!--</div>-->
+<!--</div>-->
+    <!--<div class="col-sm-4 col-sm-offset-4">-->
+      <!--<h3>Column 2</h3>-->
+
+<!--<div align="center" class="embed-responsive embed-responsive-16by9">-->
+    <!--<audio autoplay loop class="embed-responsive-item">-->
+        <!--<source src="C:\Users\Vikas\Music\Mymusic\Music files\PEHLI NAZAR MEIN (G).mp3">-->
+    <!--</audio>-->
+
+<!--</div><br />-->
+    <!--<div class="col-sm-7 col-sm-offset-4">-->
+      <!--<h3>Column 3</h3>        -->
+      <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>-->
+      <!--<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
 
 
-					  <h1 id="h1">Log in</h1>
-					  <p class="d1" bgcolor="#F5FFFA">
-					  Log in with your <br> email and password.</p>
-					  <br>
 
-							<a href="fb.html"target="_blank"><b>Log in with facebook</b></a><br<br>
-					<br><br>
+                <!--footer starts-->
 
-
-			<form id="demo"method="POST">
+	        <div class="row">
+		<div class="col-sm-4 col-sm-offset-4">
+	               
+			<h1><p style="font-family:Monotype Corsiva; color:pink; font-size:50px;">Instagram Clone</p></h1>
+	                <h1><p style="font-family:Monotype Corsiva; color:pink; font-size:35px;">Login</p></h1>
+	      
+			<form method="post">
 			{% csrf_token %}
- 		 <br>
-		 <input id ="id1"type="text" name="email" value="{{ email }}"placeholder="MOBILE NUMBER OR EMAIL"size="50">
-		<br>
-  	        <br>
+				<div>
+					<label for="username">Username:</label>
+					<input id="username" type="text" name="username" value="">
+			        </div>
+				<div>
+					<label for="password">Password:</label>
+					<input id="password" type="Password" name="password" value="">
+				</div>
+					<input type="submit" value="Login" class="btn btn-success">
+			</form>
+		</div>
+		</div>
+                <nav class="navbar navbar-inverse navbar-fixed-bottom">
+			<div class="container-fluid">
+				<!--row3-->
+				<div class="row">
+					<!--Left column-->
+					<div class="col-xs-12 col-sm-8">
+						<ul class="nav navbar-nav">
+							<li><a href="#">ABOUT US</a></li>
+							<li><a href="#">SUPPORT</a></li>
+							<li><a href="#">BLOG</a></li>
+							<li><a href="#">PRESS</a></li>
+							<li><a href="#">API</a></li>
+							<li><a href="#">JOBS</a></li>
+							<li><a href="#">PRIVACY</a></li>
+							<li><a href="#">TERMS</a></li>
+							<li><a href="#">LANGUAGE</a></li>
+						</ul>
+					</div>
+					<!--./Left column-->	
+			
+					<!--Right column-->
+					<div class="col-xs-12 col-sm-4">
+						<p class="navbar-text">
+							&copy; 2017 INSTAGRAM
+						</p>
+					</div>
+					<!--./Right column-->
+				 </div>
+				 <!--./row3-->
+		        </div>
+		</nav>
 
-		<input id="id1" type="password" value="{{ password }}"placeholder="PASSWORD"size="50">
-		<div>
-			<input type="submit"value="ok"></div>
-			</form><br><br>
-			<!--<a href="sign.html"target="_blank"><b>Sign Up</a><br> -->
-			</div></div>
+     
 
-
-
-
-
-
-
-
-
-		<script src = "{% static "js/jquery-3.2.1.js" %}"></script>
-		<script scr="{% static "js/bootstrap.js" %}"></script>
+		<!--Javascript files-->
+		<!--Jquery library-->
+		<script src={% static "js/jquery-3.2.1.js" %}"></script>
+		<!--Bootstrap js Library-->
+		<script src="{% static "js/bootstrap.js" %}"></script>
 	</body>
 </html>
+
