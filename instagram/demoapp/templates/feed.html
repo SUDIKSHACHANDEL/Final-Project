@@ -1,0 +1,64 @@
+<html>
+<head>
+	<style>
+			body {
+    background-image: url("E:\download (1).jpg");
+    background-repeat: no-repeat;
+}
+
+
+		</style>
+</head>
+
+<body>
+
+<div >
+
+	{% for post in posts %}
+
+	<h1>Posted by : {{ post.user.username}}</h1>
+	<p>[{{ post.created_on }}]</p>
+
+	<img style="disply:inline-block;width:350px;height:300px;"src="{{ post.image_url}}">
+	<span  style="display:inline-block;">{{ post.caption }}</span><br/><br/>
+	<div style="display:inline-block">
+		{{ post.like_count }} likes this post.
+	</div>
+
+	<!--<div id ="caption">-->
+		<!--Caption: {{ post.caption }}-->
+		</br>
+	<!--</div>-->
+	<div style="display:inline-block">
+	<form action = "/like/" method="POST">
+		{% csrf_token %}
+		<input type="hidden" name="post" value="{{ post.id }}">
+		{% if post.has_liked %}
+		<input type="submit"clas="btn btn-default" value="Unlike">
+		{% else %}
+		<input  type="submit"class="btn btn-default" value="Like">
+		{% endif %}
+	</form>
+	</div>
+
+	<h4> Likes : {{ post.check_likes }}</h4>
+	<div>
+	<form method="POST" action="/comment/">
+                {% csrf_token %}
+                <input type="hidden" name="post" value="{{ post.id }}" />
+                <input type="text" name="comment_text" id="comment_text" placeholder="Make a comment.." value="{{ comment_text }}"/>
+                {{ comment_text }}
+                <input type="submit" class="btn-default btn" value="Comment">
+	</form>
+	</div>
+	<div>
+			    {% for comment in post.comments %}
+	            <p><b>{{ comment.user.username }} [{{ comment.created_on }}]</b> ({{ comment.comment_text }})</p>
+			    {% endfor %}
+	</div>
+
+    {% endfor %}
+
+</div>
+</body>
+</html>
