@@ -1,4 +1,4 @@
-"""instagram URL Configuration
+"""Django_Project URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -15,7 +15,18 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-
+from django.conf import settings
+from views import signup_view, login_view, feed_view, post_view, like_view, comment_view, logout_view
+from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^post/', post_view),
+    url(r'^feed/', feed_view),
+    url(r'^like/',like_view),
+    url(r'^comment/',comment_view),
+    url(r'^signup/', signup_view),
+    url(r'^login/', login_view),
+    url(r'^logout/',logout_view),
+    url('' ,signup_view)
 ]
+
