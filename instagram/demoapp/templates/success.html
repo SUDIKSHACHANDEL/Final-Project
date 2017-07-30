@@ -1,51 +1,53 @@
-{% load static %}
+{% load static  %}
 <!DOCTYPE html>
 <html>
-<head>
-   <title>Sign-up</title>
-
+	<head>
+		<title>Login</title>
 		<meta charset="utf-8">
-		<meta http-equive"X-UA-Compatible" contents= "IE#edge">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-        <!--Bootstrap-->
+    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<meta name="viewport" content="width=device-width">
+
 		<link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="{% static "css/site.css" %}" />
+		<style>
+body {
+    width: 100%;
+    height: 100%;
 
+    background-color:#FF6347;
+    background-size: 100% 100%;
 
-<style>
-    h1{
-      background-color:pink;
-      color:white;
-    }
-    a:link,a:visited {
-
-			background-color:blue;
-			display:inline block;
-		        text-decoration:none;
-			border-radius:5px;
-		        text-align:center;
-			padding: 8px 15px;
-
-			color:white;
-	               }
-
-
+}
 </style>
-</head>
 
 
-<body>
+	</head>
 
-<div>
-<h1>User Registerd successfully! Try Log in.</h1>
-</div><div>
-    <a href="login/"target="_blank"><b>LOG IN</b></a><br><br></div>
-</body>
+	 <body>
+		<!--footer starts-->
+
+	        <div class="row">
+		<div class="col-sm-4 col-sm-offset-4">
+			<br><br>
+			<table align="center"width="80%"height="100%">
+				<tbody bgcolor="#FFE4B5"width="40%"height="50%"border="1px solid grey"><td align="center">
+
+			<h1><p style="font-family:Monotype Corsiva; color:#FF1493; font-size:50px;">Instagram Clone</p></h1>
+	                <h3 color="grey"><p style="font-family:Monotype Corsiva; color:#FF1493; font-size:35px;">Welcome...!you are registerd successfully.Plz Log in with user name and password.
+</p></h3>
 
 
+			{% csrf_token %}
+				<br>
+                    <a href="/login/"class="btn btn-success">Login</a>
 
-<script src = "{% static "js/jquery-3.2.1.js" %}"></script>
-		<script scr="{% static "js/bootstrap.js" %}"></script>
+			</td></tbody>
+			</table>
+		</div>
+		</div>
 
 
+</body></html>
 
-</html>
+
